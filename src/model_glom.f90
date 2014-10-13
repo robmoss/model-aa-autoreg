@@ -184,7 +184,7 @@ contains
     BG_x(0) = b_aff
 
     do i = 1, NS
-       p_onc = p_oncotic(c_p * QG_x(i - 1) / q_aff)
+       p_onc = p_oncotic(c_p * q_aff / QG_x(i - 1))
        ! The decrease in plasma flow due to some fraction being filtered.
        dQ = - p%kf * (PG_x(i - 1) - p_onc - p%p_bc)
        ! The decrease in hydrostatic pressure due to blood flow.
